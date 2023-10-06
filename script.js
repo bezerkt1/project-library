@@ -260,23 +260,24 @@ const createCard = (recipe) => {
   return card;
 }
 
-// use include method
 const addCuisineFilters = () => {
   let cuisines = [];
   recipes.forEach((recipe) => {
     if (typeof recipe.cuisineType === "string") {
-      if (cuisines.includes(recipe.cuisineType.toLowerCase())) {
-        cuisines.push(recipe.cuisineType.toLowerCase());
+      const cuisine = recipe.cuisineType.toLowerCase();
+      if (!cuisines.includes(cuisine)) {
+        cuisines.push(cuisine);
         const option = document.createElement("option");
-        option.innerHTML = recipe.cuisineType.toLowerCase();
+        option.innerHTML = cuisine;
         cuisineFilter.appendChild(option);
       }
     } else {
       recipe.cuisineType.forEach((cuisine) => {
-        if (cuisines.includes(cuisine.toLowerCase())) {
-          cuisines.push(cuisine.toLowerCase());
+        cuisine = cuisine.toLowerCase();
+        if (!cuisines.includes(cuisine)) {
+          cuisines.push(cuisine);
           const option = document.createElement("option");
-          option.innerHTML = cuisine.toLowerCase();
+          option.innerHTML = cuisine;
           cuisineFilter.appendChild(option);
         }
       });
