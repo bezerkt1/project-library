@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Don't forget to change the title and connect the CSS file -->
-  <title>Project Library</title>
+  <title>Ribbit recipes</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <h1>Project Library</h1>
+  <h1>Ribbit recipes</h1>
   <!-- Don't forget to connect the JavaScript file -->
+  <section id="toolbar">
+    <select id="cuisineFilter">
+      <option value="0">Select Cuisine</option>
+    </select>
+    <select id="ingredientFilter">
+      <option value="0">Ingredient limit</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+    <select id="sort">
+      <option value="0">Least to most ingredients</option>
+      <option value="1">Most to least ingredients</option>
+      <option value="2">A to Z</option>
+      <option value="3">Z to A</option>
+    </select>
+    <input type="text" id="search" placeholder="Search...">
+  </section>
+  </section>
+  <section id="recipeList"></section>
+  <footer>
+    <h1>Bon appetit!</h1>
+  </footer>
 </body>
+
 </html>

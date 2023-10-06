@@ -2,189 +2,7 @@
 If you choose to create your own arrays with elements, just make sure that some
 of the properties make sense to filter on, and some to sort on.*/
 
-const books = [
-  {
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    year: 1925,
-    genre: 'Fiction',
-    rating: 4.2,
-    description:
-      'A classic novel set in the Roaring Twenties, it explores themes of wealth, love, and the American Dream through the enigmatic Jay Gatsby.',
-    image: './books-images/the-great-gatsby.jpg'
-  },
-  {
-    title: 'To Kill a Mockingbird',
-    author: 'Harper Lee',
-    year: 1960,
-    genre: 'Fiction',
-    rating: 4.5,
-    description:
-      'Set in the American South, this novel tackles issues of racism and injustice through the eyes of young Scout Finch.',
-    image: './books-images/to-kill-a-mockingbird.jpg'
-  },
-  {
-    title: '1984',
-    author: 'George Orwell',
-    year: 1949,
-    genre: 'Science Fiction',
-    rating: 4.4,
-    description:
-      'A dystopian classic that explores totalitarianism and the consequences of a surveillance state in a bleak future.',
-    image: './books-images/1984.jpg'
-  },
-  {
-    title: 'Pride and Prejudice',
-    author: 'Jane Austen',
-    year: 1813,
-    genre: 'Fiction',
-    rating: 4.25,
-    description:
-      'A timeless romance novel that examines societal expectations and the misunderstandings that can arise from pride and prejudice.',
-    image: './books-images/pride-and-prejudice.jpg'
-  },
-  {
-    title: 'The Catcher in the Rye',
-    author: 'J.D. Salinger',
-    year: 1951,
-    genre: 'Fiction',
-    rating: 4,
-    description:
-      'Narrated by the teenage Holden Caulfield, the novel explores themes of alienation and the search for authenticity.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkien',
-    year: 1937,
-    genre: 'Fantasy',
-    rating: 4.6,
-    description:
-      'A fantasy adventure novel that follows Bilbo Baggins on a quest to help a group of dwarves reclaim their homeland from a dragon.',
-    image: './books-images/the-hobbit.jpg'
-  },
-  {
-    title: "Harry Potter and the Sorcerer's Stone",
-    author: 'J.K. Rowling',
-    year: 1997,
-    genre: 'Fantasy',
-    rating: 4.7,
-    description:
-      'The first book in the beloved Harry Potter series, it introduces readers to the magical world of Hogwarts and the young wizard Harry Potter.',
-    image: "./books-images/harry-potter-and-the-sorcerer'.jpg"
-  },
-  {
-    title: 'Moby-Dick',
-    author: 'Herman Melville',
-    year: 1851,
-    genre: 'Adventure',
-    rating: 4.1,
-    description:
-      'An epic tale of obsession, revenge, and the relentless pursuit of the great white whale, Moby Dick.',
-    image: './books-images/moby-dick.jpg'
-  },
-  {
-    title: 'The Lord of the Rings: The Fellowship of the Ring',
-    author: 'J.R.R. Tolkien',
-    year: 1954,
-    genre: 'Fantasy',
-    rating: 4.55,
-    description:
-      'The first volume of the epic fantasy trilogy follows Frodo Baggins and the Fellowship on their quest to destroy the One Ring.',
-    image: './books-images/the-lord-of-the-rings.jpg'
-  },
-  {
-    title: 'The Shining',
-    author: 'Stephen King',
-    year: 1977,
-    genre: 'Horror',
-    rating: 4.3,
-    description:
-      "A psychological horror novel that tells the story of the Torrance family's terrifying experiences at the haunted Overlook Hotel.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe',
-    author: 'C.S. Lewis',
-    year: 1950,
-    genre: 'Fantasy',
-    rating: 4.15,
-    description:
-      'The first book in the Chronicles of Narnia series, it follows the adventures of children who discover the magical land of Narnia.',
-    image: './books-images/the-chronicles-of-narnia.jpg'
-  },
-  {
-    title: 'The Da Vinci Code',
-    author: 'Dan Brown',
-    year: 2003,
-    genre: 'Mystery',
-    rating: 3.8,
-    description:
-      'A gripping mystery thriller that follows Harvard symbologist Robert Langdon as he unravels the secrets of the Da Vinci Code.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Alchemist',
-    author: 'Paulo Coelho',
-    year: 1988,
-    genre: 'Fiction',
-    rating: 4.25,
-    description:
-      'A philosophical novel that tells the story of Santiago, a shepherd boy, on his quest to discover his personal legend.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    year: 2008,
-    genre: 'Science Fiction',
-    rating: 4.3,
-    description:
-      "In a dystopian future, Katniss Everdeen becomes a symbol of rebellion when she volunteers to take her sister's place in the brutal Hunger Games.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Girl with the Dragon Tattoo',
-    author: 'Stieg Larsson',
-    year: 2005,
-    genre: 'Mystery',
-    rating: 4.1,
-    description:
-      'A gripping mystery novel featuring investigative journalist Mikael Blomkvist and the enigmatic hacker Lisbeth Salander.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Road',
-    author: 'Cormac McCarthy',
-    year: 2006,
-    genre: 'Dystopian',
-    rating: 4,
-    description:
-      "Set in a post-apocalyptic world, it follows a father and son's harrowing journey to survive and find safety.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: "The Hitchhiker's Guide to the Galaxy",
-    author: 'Douglas Adams',
-    year: 1979,
-    genre: 'Science Fiction',
-    rating: 4.35,
-    description:
-      "A comedic science fiction series that follows the misadventures of Arthur Dent after Earth's destruction.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Giver',
-    author: 'Lois Lowry',
-    year: 1993,
-    genre: 'Dystopian',
-    rating: 4.12,
-    description:
-      'A dystopian novel set in a seemingly perfect society where young Jonas discovers the dark truth beneath the surface.',
-    image: './books-images/unknown.jpg'
-  }
-]
-
+// Modified array, changed the url key all to lowercase as it was uppercase on some
 const recipes = [
   {
     name: 'Individual vegetarian lasagnes',
@@ -230,7 +48,7 @@ const recipes = [
     ],
     source: 'Red Cook',
     totalTime: null,
-    URL: 'http://redcook.net/2010/06/16/garlic-scape-an-off-menu-treat/',
+    url: 'http://redcook.net/2010/06/16/garlic-scape-an-off-menu-treat/',
     image: './recipe-images/vegetarian-stir-fried-garlic-s.jpg'
   },
   {
@@ -244,7 +62,7 @@ const recipes = [
     ],
     source: 'BBC Good Food',
     totalTime: 40,
-    URL: 'https://www.bbcgoodfood.com/recipes/cheats-cheesy-focaccia',
+    url: 'https://www.bbcgoodfood.com/recipes/cheats-cheesy-focaccia',
     image: './recipe-images/cheat’s-cheesy-focaccia.jpg'
   },
   {
@@ -269,7 +87,7 @@ const recipes = [
     ],
     source: 'Martha Stewart',
     totalTime: 120,
-    URL: 'https://www.marthastewart.com/1535235/vegetarian-shepherds-pie',
+    url: 'https://www.marthastewart.com/1535235/vegetarian-shepherds-pie',
     image: "./recipe-images/vegetarian-shepherd's-pie.jpg"
   },
   {
@@ -290,7 +108,7 @@ const recipes = [
     ],
     source: 'No Recipes',
     totalTime: 80,
-    URL: 'http://norecipes.com/recipe/chicken-paprikash/',
+    url: 'http://norecipes.com/recipe/chicken-paprikash/',
     image: './recipe-images/chicken-paprikash.jpg'
   },
   {
@@ -404,3 +222,169 @@ const recipes = [
     image: './recipe-images/grilled.jpg'
   }
 ]
+
+const recipeList = document.getElementById("recipeList");
+const cuisineFilter = document.getElementById("cuisineFilter");
+const ingredientFilter = document.getElementById("ingredientFilter");
+const sorting = document.getElementById("sort");
+const searchBar = document.getElementById("search");
+
+// FUNCTIONS
+
+/* A function to create a recipe card
+*/
+const createCard = (recipe) => {
+  const card = document.createElement("a");
+  card.href = recipe.url;
+  card.classList.add("recipeLink");
+
+  // check for null as some do not have the time entered
+  let totalTime = ""
+  if (recipe.totalTime !== null) {
+    totalTime = `<p>Time: ${recipe.totalTime}</p>`;
+  }
+
+  // used toString method for cuisineType is a string in some objects and arrays in others
+  card.innerHTML = `
+  <a href=${recipe.url} class="recipeLink">
+    <div class="card">
+      <img class="recipeImg" src=${recipe.image} alt="${recipe.name}">
+      <h2>${recipe.name}</h2>
+      <p>Source: ${recipe.source}</p>
+      <p>Ingredients: ${recipe.ingredients.length}</p>
+      <p>Cuisine: ${recipe.cuisineType.toString()}</p>
+      ${totalTime}
+    </div>
+  </a>`;
+
+  return card;
+}
+
+// use include method
+const addCuisineFilters = () => {
+  let cuisines = [];
+  recipes.forEach((recipe) => {
+    if (typeof recipe.cuisineType === "string") {
+      if (cuisines.includes(recipe.cuisineType.toLowerCase())) {
+        cuisines.push(recipe.cuisineType.toLowerCase());
+        const option = document.createElement("option");
+        option.innerHTML = recipe.cuisineType.toLowerCase();
+        cuisineFilter.appendChild(option);
+      }
+    } else {
+      recipe.cuisineType.forEach((cuisine) => {
+        if (cuisines.includes(cuisine.toLowerCase())) {
+          cuisines.push(cuisine.toLowerCase());
+          const option = document.createElement("option");
+          option.innerHTML = cuisine.toLowerCase();
+          cuisineFilter.appendChild(option);
+        }
+      });
+    }
+  })
+}
+
+const createList = (list) => {
+  recipeList.innerHTML = "";
+  list.forEach((recipe) => {
+    recipeList.appendChild(createCard(recipe));
+  });
+}
+
+const refresh = () => {
+  let filteredRecipes = recipes;
+  if (cuisineFilter.value !== "0") {
+    filteredRecipes = filterCuisine(filteredRecipes, cuisineFilter.value);
+  }
+  if (ingredientFilter.value !== "0") {
+    filteredRecipes = filterIngredients(filteredRecipes, ingredientFilter.value);
+  }
+  if (searchBar.value !== null) {
+    filteredRecipes = search(filteredRecipes, searchBar.value);
+  }
+  filteredRecipes = sort(filteredRecipes, sorting.value);
+  createList(filteredRecipes);
+}
+
+const filterCuisine = (list, name) => {
+  // if a string is not passed make an empty one else make name argument lowercase to make it case insensitive later
+  if (typeof name !== "string") {
+    name = "";
+  } else {
+    name = name.toLowerCase();
+  }
+  list = list.filter((recipe) => {
+    // making cuisineType variable of the objects into a string in case they are arrays and lowercase so it is case insensitive
+    const cuisines = recipe.cuisineType.toString().toLowerCase();
+    if (cuisines.includes(name)) {
+      return recipe;
+    }
+  });
+  return list;
+};
+
+const filterIngredients = (list, limit) => {
+  // if no ingredient limit is passed then just make it very high to not filter
+  limit = parseInt(limit);
+  list = list.filter((recipe) => {
+    if (recipe.ingredients.length <= limit) {
+      return recipe;
+    }
+  });
+  return list;
+};
+
+const search = (list, keyword) => {
+  // if a string is not passed make an empty one else make name argument lowercase to make it case insensitive later
+  if (typeof keyword !== "string") {
+    keyword = "";
+  } else {
+    keyword = keyword.toLowerCase();
+  }
+  list = list.filter((recipe) => {
+    // make recipe name lower case so it is case insensitive
+    const recipeName = recipe.name.toLowerCase();
+    if (recipeName.includes(keyword)) {
+      return recipe;
+    }
+  });
+  return list;
+}
+
+const sort = (list, value) => {
+  switch (value) {
+    case "1":
+      list.sort((x, y) => {
+        return y.ingredients.length - x.ingredients.length;
+      });
+      break;
+    case "2":
+      list.sort((x, y) => {
+        return x.name.localeCompare(y.name);
+      });
+      break;
+    case "3":
+      list.sort((x, y) => {
+        return y.name.localeCompare(x.name);
+      });
+      break;
+    default:
+      list.sort((x, y) => {
+        return x.ingredients.length - y.ingredients.length;
+      });
+  }
+  return list;
+}
+
+
+// RUNTIME
+
+// Populate cuisine filter and recipe list with no filters
+refresh();
+addCuisineFilters();
+
+// Add event listeners
+cuisineFilter.addEventListener("change", refresh);
+ingredientFilter.addEventListener("change", refresh);
+sorting.addEventListener("change", refresh);
+searchBar.addEventListener("input", refresh);
