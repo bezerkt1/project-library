@@ -1,31 +1,60 @@
+:root {
+    --primary: #9B8816;
+    --ptext: #131313;
+    --secondary: #D6FFB7;
+    --stext: #131313;
+    --tertiary: #CB8589;
+    --ttext: #131313;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 body {
-    background-color: beige;
+    background-color: var(--primary);
 }
 
 h1,
-h2,
-h3 {
-    color: #131313;
+h2 {
+    color: var(--ptext);
     text-align: center;
 }
 
-h2 {
-    margin: 0;
-    background-color: orange;
+h1 {
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-h3 {
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    color: var(--ptext);
     margin: 5px;
-    text-align: left;
-    vertical-align: bottom;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    text-align: center;
+    background-color: var(--tertiary);
+    box-shadow: 3px 3px 6px #131313;
+    padding: 10px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+footer {
+    border-top: 2px solid #131313;
+    background-color: var(--tertiary);
 }
 
 #recipeList {
-    background-color: lightgreen;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -33,26 +62,29 @@ h3 {
 
 .recipeLink {
     text-decoration: none;
+    color: var(--ptext);
     margin: 20px;
 }
 
 .card {
-    border: 1px solid orange;
+    border: 2px solid var(--tertiary);
+    border-radius: 7px;
+    box-shadow: 3px 3px 6px #131313;
     width: 280px;
-    height: 380px;
-    background-color: beige;
+    background-color: var(--secondary);
+}
+
+.cardHeader {
+    background-color: var(--tertiary);
+    color: var(--stext);
 }
 
 .recipeImg {
+    border-radius: 7px;
+    background-color: var(--tertiary);
     width: 100%;
     height: 150px;
     object-fit: cover;
-}
-
-#toolbar {
-    text-align: center;
-    background-color: lightgrey;
-    padding: 10px;
 }
 
 select,

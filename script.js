@@ -242,18 +242,20 @@ const createCard = (recipe) => {
   // check for null as some do not have the time entered
   let totalTime = ""
   if (recipe.totalTime !== null) {
-    totalTime = `<p>Time: ${recipe.totalTime}</p>`;
+    totalTime = `<p><b>Time:</b> ${recipe.totalTime}</p>`;
   }
 
   // used toString method for cuisineType is a string in some objects and arrays in others
   card.innerHTML = `
   <a href=${recipe.url} class="recipeLink">
     <div class="card">
-      <img class="recipeImg" src=${recipe.image} alt="${recipe.name}">
-      <h2>${recipe.name}</h2>
-      <p>Source: ${recipe.source}</p>
-      <p>Ingredients: ${recipe.ingredients.length}</p>
-      <p>Cuisine: ${recipe.cuisineType.toString()}</p>
+      <div class="cardHeader">
+        <img class="recipeImg" src=${recipe.image} alt="${recipe.name}">
+        <h2>${recipe.name}</h2>
+      </div>
+      <p><b>Source:</b> ${recipe.source}</p>
+      <p><b>Ingredients:</b> ${recipe.ingredients.length}</p>
+      <p><b>Cuisine:</b> ${recipe.cuisineType.toString()}</p>
       ${totalTime}
     </div>
   </a>`;

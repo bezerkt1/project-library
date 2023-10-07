@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <h1>Ribbit recipes</h1>
   <!-- Don't forget to connect the JavaScript file -->
-  <section id="toolbar">
+  <header id="toolbar">
+    <h1>Ribbit Recipes</h1>
     <select id="cuisineFilter">
       <option value="0">Select Cuisine</option>
     </select>
@@ -29,9 +29,12 @@
       <option value="3">Z to A</option>
     </select>
     <input type="text" id="search" placeholder="Search...">
-  </section>
-  </section>
-  <section id="recipeList"></section>
+  </header>
+
+  <main>
+    <section id="recipeList"></section>
+  </main>
+
   <footer>
     <h1>Bon appetit!</h1>
   </footer>
