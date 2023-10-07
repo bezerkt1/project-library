@@ -223,6 +223,7 @@ const recipes = [
   }
 ]
 
+// Getting the different components of the html page
 const recipeList = document.getElementById("recipeList");
 const cuisineFilter = document.getElementById("cuisineFilter");
 const ingredientFilter = document.getElementById("ingredientFilter");
@@ -260,9 +261,13 @@ const createCard = (recipe) => {
   return card;
 }
 
+/* A function to populate the cuisine filter dropdown menu
+*/
 const addCuisineFilters = () => {
+  // a new array to put in the cuisines without duplicates
   let cuisines = [];
   recipes.forEach((recipe) => {
+    // as some recipes have their cuisine type as an array check and continue as appropriate
     if (typeof recipe.cuisineType === "string") {
       const cuisine = recipe.cuisineType.toLowerCase();
       if (!cuisines.includes(cuisine)) {
@@ -285,6 +290,8 @@ const addCuisineFilters = () => {
   })
 }
 
+/* A function that creates the recipe cards and appends them in the html
+*/
 const createList = (list) => {
   recipeList.innerHTML = "";
   list.forEach((recipe) => {
@@ -292,21 +299,8 @@ const createList = (list) => {
   });
 }
 
-const refresh = () => {
-  let filteredRecipes = recipes;
-  if (cuisineFilter.value !== "0") {
-    filteredRecipes = filterCuisine(filteredRecipes, cuisineFilter.value);
-  }
-  if (ingredientFilter.value !== "0") {
-    filteredRecipes = filterIngredients(filteredRecipes, ingredientFilter.value);
-  }
-  if (searchBar.value !== null) {
-    filteredRecipes = search(filteredRecipes, searchBar.value);
-  }
-  filteredRecipes = sort(filteredRecipes, sorting.value);
-  createList(filteredRecipes);
-}
-
+/* A function that returns a list of recipes filtered by cuisine
+*/
 const filterCuisine = (list, name) => {
   // if a string is not passed make an empty one else make name argument lowercase to make it case insensitive later
   if (typeof name !== "string") {
@@ -324,6 +318,8 @@ const filterCuisine = (list, name) => {
   return list;
 };
 
+/* A function that returns a list of recipes filtered by ingredient limit
+*/
 const filterIngredients = (list, limit) => {
   // if no ingredient limit is passed then just make it very high to not filter
   limit = parseInt(limit);
@@ -335,6 +331,8 @@ const filterIngredients = (list, limit) => {
   return list;
 };
 
+/* A function that returns a list of the recipes that contain a keyword in the name
+*/
 const search = (list, keyword) => {
   // if a string is not passed make an empty one else make name argument lowercase to make it case insensitive later
   if (typeof keyword !== "string") {
@@ -352,6 +350,12 @@ const search = (list, keyword) => {
   return list;
 }
 
+/* A function that returns a sorted recipe list depending on the value of the second parameter
+1 = Most to least ingredients
+2 = A to Z
+3 = Z to A
+default = Least to most ingredients
+*/
 const sort = (list, value) => {
   switch (value) {
     case "1":
@@ -377,6 +381,23 @@ const sort = (list, value) => {
   return list;
 }
 
+/* A function that filters and sort recipes and displays the result
+*/
+const refresh = () => {
+  let filteredRecipes = recipes;
+  if (cuisineFilter.value !== "0") {
+    filteredRecipes = filterCuisine(filteredRecipes, cuisineFilter.value);
+  }
+  if (ingredientFilter.value !== "0") {
+    filteredRecipes = filterIngredients(filteredRecipes, ingredientFilter.value);
+  }
+  if (searchBar.value !== null) {
+    filteredRecipes = search(filteredRecipes, searchBar.value);
+  }
+  filteredRecipes = sort(filteredRecipes, sorting.value);
+  createList(filteredRecipes);
+}
+
 
 // RUNTIME
 
@@ -384,7 +405,7 @@ const sort = (list, value) => {
 refresh();
 addCuisineFilters();
 
-// Add event listeners
+// Add event listeners to the html elements
 cuisineFilter.addEventListener("change", refresh);
 ingredientFilter.addEventListener("change", refresh);
 sorting.addEventListener("change", refresh);
