@@ -242,7 +242,7 @@ const createCard = (recipe) => {
   // check for null as some do not have the time entered
   let totalTime = ""
   if (recipe.totalTime !== null) {
-    totalTime = `<p><b>Time:</b> ${recipe.totalTime}</p>`;
+    totalTime = `<p><b>Time:</b> ${recipe.totalTime} min</p>`;
   }
 
   // used toString method for cuisineType is a string in some objects and arrays in others
