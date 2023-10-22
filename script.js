@@ -254,7 +254,7 @@ const createCard = (recipe) => {
         <h2>${recipe.name}</h2>
       </div>
       <p><b>Source:</b> ${recipe.source}</p>
-      <p><b>Ingredients:</b> ${recipe.ingredients.length}</p>
+      <p><b>Ingredients:</b> <ul>${getIngredientList(recipe.ingredients)}</ul></p>
       <p><b>Cuisine:</b> ${recipe.cuisineType.toString()}</p>
       ${totalTime}
     </div>
@@ -290,6 +290,12 @@ const addCuisineFilters = () => {
       });
     }
   })
+}
+
+const getIngredientList = (ingredients) => {
+  let ingredientList = "";
+  ingredients.forEach((ingredient) => {ingredientList += `<li>${ingredient}</li>`});
+  return ingredientList;
 }
 
 /* A function that creates the recipe cards and appends them in the html
